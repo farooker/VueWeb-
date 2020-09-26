@@ -35,10 +35,33 @@
         </v-list-item>
       </v-list-item-group>
     </v-list>
+     <template v-slot:append>
+        <div class="pa-2">
+          <v-btn block rounded outlined color="#FFFFFF">
+              <v-icon>mdi-logout</v-icon>Logout</v-btn>
+        </div>
+      </template>
   </v-navigation-drawer>
 </template>
 <style scoped>
 
+.active {
+  margin: 5px;
+  border-radius: 5px;
+  background: #14fc7c;
+  box-shadow: 0px 0px 8px 0.2px #14fc7c;
+}
+.tile {
+  margin: 5px;
+  border-radius: 5px;
+}
+.pre-formatted {
+  white-space: pre;
+}
+tr:hover {
+   background-color: transparent !important;
+   background-color: rgba(0, 0, 0, 0);
+ }
 </style>
 <script>
    import store from '../../store';
